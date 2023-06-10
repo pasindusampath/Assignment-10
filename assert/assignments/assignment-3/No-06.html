@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid layout case 06</title>
+    <style>
+        body > div {
+            border: 1px  black;
+            width: 1000px;
+            height: 500px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            /*grid-template-columns: repeat(4 ,1fr);*/
+
+            grid-template-rows: 1fr 1fr 1fr;
+
+        }
+
+
+        body > div > div {
+            border: 1px solid black;
+
+        }
+
+        body > div > div:nth-child(1) {
+            background-color: red;
+            grid-column: 1/3;
+        }
+        body > div > div:nth-child(2) {
+            background-color: darkgreen;
+        }
+
+
+        body > div > div:nth-child(3) {
+            background-color: orangered;
+            grid-column: 4/5;
+            grid-row: 1/4;
+        }
+
+        body > div > div:nth-child(4) {
+            background-color: purple;
+
+        }
+
+        body > div > div:nth-child(5) {
+            background-color: deeppink;
+        }
+
+        body > div > div:nth-child(6) {
+            background-color: blue;
+        }
+
+        body > div > div:nth-child(7) {
+            background-color: brown;
+        }
+
+        body > div > div:nth-child(8) {
+            background-color: darkblue;
+            grid-column: 2/4;
+        }
+
+        body > div > div:nth-child(9) {
+            background-color: darkblue;
+        }
+
+        body > div > div:nth-child(10) {
+            background-color: chocolate;
+        }
+
+        body > div > div:nth-child(11) {
+            background-color: cornflowerblue;
+        }
+
+        body > div > div:nth-child(12) {
+            background-color: gold;
+        }
+    </style>
+
+</head>
+<body>
+<div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <div></div>
+    <div></div>
+    <div></div>
+
+
+    <div></div>
+    <div></div>
+    <div></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        body>section{
+            position: relative;
+            overflow: hidden;
+        }
+        body>section>div>{
+            position: absolute;
+        }
+
+        body>section>div:first-child{
+            background-image: url("assert/image/sky.jpg");
+            position: relative;
+            width: 1920px;
+            height: 550px;
+
+        }
+        body>section>div:nth-child(2){
+            background-image: url("assert/image/city.png");
+            position: absolute;
+            width: 2000px;
+            background-size: 2000px 250px;
+            height: 250px;
+            bottom: 150px;
+            margin: auto;
+            animation-name: running2;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+        }
+        body>section>div:nth-child(3){
+            background-image: url("assert/image/road.jpg");
+            background-repeat: repeat-x;
+            position: absolute;
+            width: 5139px;
+            height: 150px;
+            bottom: 0;
+            animation-name: running;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+        }
+        body>section>div:nth-child(4){
+            position: absolute;
+            width: 200px;
+            height: 150px;
+            right: 0;
+            left: 0;
+            bottom: 80px;
+            margin: auto;
+        }
+        body>section>div:nth-child(4)>div:first-child{
+            background-image: url("assert/image/car.png");
+            background-position: center;
+            left: 0;
+            right: 0;
+            margin: auto;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 300px 150px;
+            width: 300px;
+            height: 150px;
+        }
+        body>section>div:nth-child(4)>div:nth-child(2),body>section>div:nth-child(4)>div:nth-child(3){
+            background-image: url("assert/image/wheel.png");
+            position: absolute;
+            bottom: 20px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 50px 50px;
+            width: 50px;
+            height: 50px;
+            animation-name: rotate;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+
+        }
+        body>section>div:nth-child(4)>div:nth-child(2){
+            left: 28px;
+        }
+        body>section>div:nth-child(4)>div:nth-child(3){
+            left: 212px;
+        }
+        @keyframes running {
+            from{
+                transform: translateX(-0%);
+            }
+            to{
+                transform: translateX(-60%);
+            }
+        }
+
+        @keyframes running2 {
+            from{
+                transform: translateX(-0%);
+            }
+            to{
+                transform: translateX(-40%);
+            }
+        }
+        @keyframes rotate {
+            from{
+                transform: rotate(1turn);
+            }
+            to{
+                transform: rotate(10turn);
+            }
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+</section>
+
+</body>
+</html>

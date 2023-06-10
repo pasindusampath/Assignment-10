@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>No-02</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <!-- <link href="assets/images/featured_channel.jpg" rel="icon">-->
+    <style>
+        header {
+            background-color: white;
+            border: 1px solid red;
+            position: relative;
+            height: 80px;
+            box-shadow: 1px 2px 3px 3px lightgray;
+        }
+
+        header > img {
+            width: 70px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        header > nav {
+            position: absolute;
+            right: 40px;
+            top: 0;
+        }
+
+        header > nav > ul > li {
+            cursor: pointer;
+            display: inline-block;
+            padding: 10px;
+
+        }
+
+        main {
+            position: relative;
+        }
+
+        main > nav {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 270px;
+            background-color: purple;
+        }
+
+        main > nav > ul > li {
+            color: white;
+            list-style: none;
+            padding-top: 10px;
+        }
+
+        main > section {
+            margin-left: 270px;
+            padding: 5px;
+        }
+
+        main > section > p {
+            color: black;
+        }
+
+        main > section > section:first-child {
+            border: 1px solid black;
+            height: 200px;
+            position: relative;
+        }
+
+        main > section > section:first-child > div {
+            border: 1px solid black;
+            height: 100%;
+            width: calc(100% / 3);
+            position: absolute;
+        }
+
+        main > section > section:first-child > div:nth-child(1){
+            background: url("assets/gif/giphy (1).gif");
+            left: 0;
+        }
+        main > section > section:first-child > div:nth-child(2){
+            background: url("assets/gif/giphy (1).gif");
+            left: calc(100%/3);
+        }
+        main > section > section:first-child > div:nth-child(3){
+            background: url("assets/gif/giphy (1).gif");
+            right: 0;
+        }
+        footer {
+            height: 60px;
+            background-color: #595555;
+        }
+
+        footer > h2 {
+            text-align: center;
+            margin-top: 0;
+            padding-top: 20px;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <img src="assets/images/featured_channel.jpg">
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>Contact</li>
+            <li>About</li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>Contact</li>
+            <li>About</li>
+        </ul>
+    </nav>
+
+    <section>
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+
+        <section>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, culpa cum cumque cupiditate
+                dignissimos dolore dolorem ducimus eos id impedit maxime minus provident quisquam similique ut vel
+                veniam vero voluptates!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, culpa cum cumque cupiditate
+                dignissimos dolore dolorem ducimus eos id impedit maxime minus provident quisquam similique ut vel
+                veniam vero voluptates!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, culpa cum cumque cupiditate
+                dignissimos dolore dolorem ducimus eos id impedit maxime minus provident quisquam similique ut vel
+                veniam vero voluptates!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, culpa cum cumque cupiditate
+                dignissimos dolore dolorem ducimus eos id impedit maxime minus provident quisquam similique ut vel
+                veniam vero voluptates!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, repellat.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur eius inventore, modi quis sint veritatis.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, culpa cum cumque cupiditate
+                dignissimos dolore dolorem ducimus eos id impedit maxime minus provident quisquam similique ut vel
+                veniam vero voluptates!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, culpa cum cumque cupiditate
+                dignissimos dolore dolorem ducimus eos id impedit maxime minus provident quisquam similique ut vel
+                veniam vero voluptates!</p>
+        </section>
+    </section>
+</main>
+<footer>
+    <h2>Developed By IJSE</h2>
+</footer>
+</body>
+</html>

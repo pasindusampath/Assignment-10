@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="assets/fonts/css/all.min.css">
+  <style>
+    body>section{
+      width: 95vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      color: black;
+    }
+    body>section>div{
+      display: flex;
+      align-items: center;
+      background-color: purple;
+      border-radius: 10px;
+      width: 160px;
+      height: 50px;
+      color: white;
+      position: relative;
+      left: -120px;
+      transition-property: all;
+      transition-duration: 1s;
+      font-family:'Poppins', sans-serif;
+      font-size:20px;
+      align-items: center;
+      justify-content: space-around;
+      border: 2px solid #6a6047;
+
+    }
+    body>section>div>i{
+      font-size: 30px;
+      color: black;
+      padding-left: 10px;
+
+    }
+    body>section>div:hover{
+      left: 0;
+      transition-property: all;
+      transition-duration: 1s;
+      background-color: #6a6047;
+    }
+  </style>
+</head>
+<body>
+<section>
+  <div>Menu One <i class="fa-solid fa-address-book"></i></i></div>
+  <div>Menu Two <i class="fa-solid fa-truck-medical"></i></div>
+  <div>Menu Three <i class="fa-solid fa-globe"></i></i></div>
+  <div>Menu Four <i class="fa-solid fa-layer-group"></i></i></div>
+  <div>Menu Five <i class="fa-solid fa-cart-shopping"></i></div>
+</section>
+</body>
+</html>

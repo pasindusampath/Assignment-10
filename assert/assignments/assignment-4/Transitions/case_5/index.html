@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        body {
+            margin: 0;
+            background-color: #e7e3e3;
+        }
+
+        section {
+            height: 500px;
+            width: 1000px;
+            display: flex;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 0;
+            right: 0;
+            box-shadow: 0 0 5px 5px black;
+        }
+
+        section > div {
+            position: relative;
+            height: 500px ;
+            width: 1000px ;
+            flex-shrink: 0;
+            background-size: cover ;
+            display: inline-block;
+            animation-name: my-animation;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            animation-direction: alternate;
+            animation-duration: 10s;
+        }
+
+        section > div:nth-of-type(1) {
+            background: url("assets/1.jpg") center;
+        }
+        section > div:nth-of-type(2) {
+            background: url("assets/10-of-the-most-beautiful-places-to-visit-in-Laos.jpg") center;
+        }
+        section > div:nth-of-type(3) {
+            background: url("assets/Simple_Landscape_Photography_Tips_With_Tons_of_Impact-2.jpg") center;
+        }
+        section > div:nth-of-type(4) {
+            background: url("assets/image-slideshow-04.webp") center;
+        }
+
+
+        @keyframes my-animation {
+            0%,20%{
+                transform: translateX(0);
+            }
+            30%,50% {
+                transform: translateX(-100%);
+            }
+            60%,80% {
+                transform: translateX(-200%);
+            }
+            90%,100% {
+                transform: translateX(-300%);
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+<section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</section>
+</body>
+</html>

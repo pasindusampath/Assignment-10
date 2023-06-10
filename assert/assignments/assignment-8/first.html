@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-color: #131212;
+        }
+        body > div {
+
+            width: 100vw;
+            height: 100vh;
+        }
+
+        body > div > div {
+            display: flex;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body > div > div > div {
+            display: flex;
+            justify-content: center;
+        }
+
+        div > div > div > div {
+            display: inline-block;
+            width: 50px;
+            height: 20px;
+            border: 3px solid #fcf8f8;
+        }
+
+        .color {
+            background: rgba(248,0,255,1);
+        }
+        .color1{
+            background: linear-gradient(90deg,rgba(248,0,255,1)  0%, rgba(234,174,235,1) 100%);
+        }
+        .color0{
+            background: linear-gradient(90deg, rgba(234,174,235,1) 0%, rgba(248,0,255,1) 100%);
+        }
+        h1{
+            color: red;
+            position: absolute;
+            top: 200px;
+            font-size: 30px;
+
+        }
+    </style>
+</head>
+<body>
+
+<audio>
+    <source src="assessts/audio/knightrider-20091.mp3" type="audio/mp3">
+</audio>
+<div>
+    <div>
+        <div>
+            <h1>KNIGHT RIDER</h1>
+            <div class="color items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+        </div>
+        <div>
+            <input type="button" id="start" value="Start">
+            <input type="button" id="end" value="END">
+        </div>
+    </div>
+
+</div>
+
+<script src="jquery-3.6.4.min.js"></script>
+<script>
+
+    var items = $(".items");
+    var currentIndex = 0;
+    var forward = true;
+
+    var fun = function () {
+        items.removeClass("color");
+        items.removeClass("color1");
+        items.removeClass("color0");
+        items.eq(currentIndex).addClass("color");
+        currentIndex-1>=0 ?items.eq(currentIndex-1).addClass("color0") : null;
+        currentIndex+1<items.length ?items.eq(currentIndex+1).addClass("color1") : null;
+        if (forward) {
+
+            currentIndex++;
+            if (currentIndex >= items.length) {
+                currentIndex = items.length - 2;
+                forward = false;
+            }
+        } else {
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = 1;
+                forward = true;
+            }
+        }
+    };
+
+    var interval = null;
+
+    $("#start").on('click',()=>{
+        $("audio")[0].play();
+        interval = setInterval(fun, 50);
+    });
+    $("#end").on('click',()=>{
+        $("audio")[0].pause();
+        clearInterval(interval);
+    });
+</script>
+</body>
+</html>

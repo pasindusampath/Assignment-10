@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background: linear-gradient(45deg , #580064 , #210064,#580064 );
+        }
+        #frame {
+            width: 200px;
+            height: 200px;
+            border: 10px solid gray;
+            border-radius: 100%;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            margin: auto;
+
+            z-index: 999999;
+        }
+
+        #frame > div {
+            width: 180px;
+            height: 180px;
+            border: 10px solid red;
+            border-radius: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            margin: auto;
+        }
+
+        .item {
+            width: 180px;
+            height: 180px;
+            background-color: purple;
+            color: black;
+            border-radius: 100%;
+            position: relative;
+
+            right: 0;
+            left: 0;
+            margin: auto;
+            margin-bottom: 230px;
+            margin-top: 230px;
+
+        }
+
+        .item > h2 {
+            position: absolute;
+            width: max-content;
+            height: max-content;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            margin: auto;
+        }
+
+        section {
+
+        }
+    </style>
+</head>
+<body>
+<div id="frame">
+    <div></div>
+</div>
+<section>
+    <div id="item-1" class="item">
+        <h2>Hello</h2>
+    </div>
+
+    <div id="item-2" class="item">
+        <h2>Java</h2>
+    </div>
+
+
+    <div id="item-3" class="item">
+        <h2>Python</h2>
+    </div>
+
+
+    <div id="item-4" class="item">
+        <h2>GoLang</h2>
+    </div>
+</section>
+
+</body>
+</html>
