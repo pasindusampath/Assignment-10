@@ -1,10 +1,10 @@
 .content h2 {
     color: #fff;
-    font-size: 8em;
     position: absolute;
     transform: translate(-50%, -50%);
 
 }
+
 .content h2:nth-child(1) {
     color: transparent;
     -webkit-text-stroke: 2px #0a0a0a;
@@ -55,5 +55,15 @@
                 100% 100%,
                 0% 100%
         );
+    }
+}
+@media all and (max-width: 2000px){
+    .content h2 {
+        font-size: 8em;
+    }
+}
+@media all and (max-width: 1400px) {
+    .content h2 {
+        font-size: 4em;
     }
 }

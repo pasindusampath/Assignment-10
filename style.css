@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: 'Poppins' , sans-serif ;
 }
+
 body{
     background: #0c1022;
     color: #fff;
@@ -314,8 +315,21 @@ body{
     display: flex;
     margin: 70px 10% 0;
 }
+#canv{
+    width : 600px;
+    height : 400px;
+}
 
-@media (min-width: 768px){
+@media all and (max-width: 1400px){
+
+    .social-media-container a{
+        width: 55px;
+        height: 55px;
+        font-size: 34px;
+    }
+    .home-content h1 {
+        font-size: 41px;
+    }
     .home-image{
         width: 300px;
         height: 300px;
@@ -330,4 +344,39 @@ body{
     .about-me{
         padding-top: 100px;
     }
+    .glowing-circle{
+        width: 305px;
+        height: 305px;
+    }
+    .glowing-circle .image{
+        width: 300px;
+        height: 300px;
+    }
+    .glowing-circle::after {
+        width: 280px;
+        height: 280px;
+    }
+    .details h3 {
+        font-size: 19px;
+    }
+    #canv{
+        width : 300px;
+        height : 200px;
+    }
+    .assignments{
+        display: flex;
+        justify-content: space-between;
+        padding: 70px 10% 0;
+        flex-direction: column;
+    }
+    .contact{
+        display: flex;
+        justify-content: space-between;
+        padding: 70px 10% 0;
+        flex-direction: column;
+    }
+    .assignments-all{
+        padding-top: 70px;
+    }
+
 }
