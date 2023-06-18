@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Pasindu Sampath</title>
-    <meta name="viewport" content="width=device-width , initial-scale=">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="assert/style/cards.css">
     <link rel="stylesheet" href="assert/style/topic.css">
     <link rel="stylesheet" href="assert/style/contact_form.css">
     <link rel="stylesheet" href="assert/style/assignments.css">
+    <link rel="stylesheet" href="assert/style/footer.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 <header class="header">
     <a href="#" class="logo">Hello World :)</a>
+    <div class="hamburger"><i class='bx bx-menu'></i></div>
     <nav class="navbar">
         <a href="#" style="--i:1" class="active">Home</a>
         <a href="#" style="--i:2">About</a>
@@ -21,6 +23,7 @@
         <a href="#" style="--i:4">Portfolio</a>
         <a href="#" style="--i:5">Contact</a>
     </nav>
+
 </header>
 <section class="home">
     <div class="social-media-container">
@@ -77,7 +80,8 @@
             <h3>Address -: Trinco R/D, Thimbirigaswewa, Habarana.</h3>
             <h3>Zip Code -: 50150</h3>
             <h3>Gmail -: <a href="mailto:pasindub32@gmail.com">pasindub32@gmail.com</a></h3>
-            <h3>Mobile No -: <a href="tel:+94787149579">+94-78 714 9579</a> / <a href="tel:+94706149579">+94-70 614 9579</a></h3>
+            <h3>Mobile No -: <a href="tel:+94787149579">+94-78 714 9579</a> / <a href="tel:+94706149579">+94-70 614
+                9579</a></h3>
         </div>
     </div>
 </section>
@@ -292,7 +296,7 @@
         </div>
     </div>
 </section>
-<section class="assignments">
+<section id="assignments" class="assignments">
     <div class="topic">
         <div class="content">
             <h2>Assignments</h2>
@@ -304,7 +308,8 @@
             <div class="cols">
                 <div class="col" ontouchstart="this.classList.toggle('hover');">
                     <div class="container">
-                        <div class="front" style="background-image: url(assert/assignments/assignment-1/assert/img/Banner.png)">
+                        <div class="front"
+                             style="background-image: url(assert/assignments/assignment-1/assert/img/Banner.png)">
                             <div class="inner">
                                 <p>Assignment 1</p>
                                 <span>First Design For My WebProfile</span>
@@ -313,7 +318,7 @@
                         <div class="back">
                             <div class="inner">
                                 <a href="assert/assignments/assignment-1/index.html">
-                                    <input type="button"onclick="" value="OPEN">
+                                    <input type="button" onclick="" value="OPEN">
                                 </a>
                             </div>
                         </div>
@@ -351,12 +356,18 @@
                         <div class="back">
                             <div class="inner">
                                 <ul class="items_in_card">
-                                    <li><a href="assert/assignments/assignment-4/Transitions/case_1/index.html">Side Menu</a></li>
-                                    <li><a href="assert/assignments/assignment-4/Transitions/case_2/index.html">Rotating Outer Circle</a></li>
-                                    <li><a href="assert/assignments/assignment-4/Transitions/case_3/index.html">Moving Box</a></li>
-                                    <li><a href="assert/assignments/assignment-4/Transitions/case_4/index.html">Water Drop</a></li>
-                                    <li><a href="assert/assignments/assignment-4/Transitions/case_5/index.html">Image Slider</a></li>
-                                    <li><a href="assert/assignments/assignment-4/Transitions/case_6/index.html">Car On The Road</a></li>
+                                    <li><a href="assert/assignments/assignment-4/Transitions/case_1/index.html">Side
+                                        Menu</a></li>
+                                    <li><a href="assert/assignments/assignment-4/Transitions/case_2/index.html">Rotating
+                                        Outer Circle</a></li>
+                                    <li><a href="assert/assignments/assignment-4/Transitions/case_3/index.html">Moving
+                                        Box</a></li>
+                                    <li><a href="assert/assignments/assignment-4/Transitions/case_4/index.html">Water
+                                        Drop</a></li>
+                                    <li><a href="assert/assignments/assignment-4/Transitions/case_5/index.html">Image
+                                        Slider</a></li>
+                                    <li><a href="assert/assignments/assignment-4/Transitions/case_6/index.html">Car On
+                                        The Road</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -455,19 +466,23 @@
             <Codegena>Contact Me</Codegena>
             <p></p>
             Name:
-            <br />
-            <input class="contact-form-name" id="ContactForm1_contact-form-name" name="name" size="30" value="" type="text" placeholder="What should I call you?" required/>
+            <br/>
+            <input class="contact-form-name" id="ContactForm1_contact-form-name" name="name" size="30" value=""
+                   type="text" placeholder="What should I call you?" required/>
             <p></p>
             E-mail:
             <span style="font-weight: bolder;color:red;">*</span>
-            <br />
-            <input class="contact-form-email" id="ContactForm1_contact-form-email" name="email" size="30" value="" type="text"  placeholder="Where can I reach you?" required/>
+            <br/>
+            <input class="contact-form-email" id="ContactForm1_contact-form-email" name="email" size="30" value=""
+                   type="text" placeholder="Where can I reach you?" required/>
             <p></p>
             Message: <span style="font-weight: bolder;color:red;">*</span>
-            <br />
-            <textarea class="contact-form-email-message" id="ContactForm1_contact-form-email-message" name="email-message" cols="25" rows="5" placeholder="What's on your mind?" required></textarea>
+            <br/>
+            <textarea class="contact-form-email-message" id="ContactForm1_contact-form-email-message"
+                      name="email-message" cols="25" rows="5" placeholder="What's on your mind?" required></textarea>
             <p></p>
-            <input class="contact-form-button contact-form-button-submit" id="ContactForm1_contact-form-submit" value="Send" type="button" />
+            <input class="contact-form-button contact-form-button-submit" id="ContactForm1_contact-form-submit"
+                   value="Send" type="button"/>
             <p></p>
             <div style="text-align: center; max-width: 222px; width: 100%">
                 <p class="contact-form-error-message" id="ContactForm1_contact-form-error-message"></p>
@@ -477,13 +492,14 @@
     </div>
 </section>
 
+
 </body>
 <script src="assert/script/jquery-3.6.4.min.js"></script>
 <script src="assert/script/image404.js"></script>
 <script>
     $(document).ready(function () {
         var buttons = $('.card-back-button');
-        var paras = $('.paragraph-about-card');
+
         buttons.each(function (index) {
             console.log(index);
             //console.log("Button " + (index + 1) + ": ", $(this));
@@ -500,6 +516,23 @@
             );
         });
     });
+
+    /*window.onscroll = function () {
+        var targetSection = document.getElementById('assignments');
+        var rect = targetSection.getBoundingClientRect();
+
+        // Check if the top of the section is visible in the viewport
+        if (rect.top >= 0 && rect.top+250 <= window.innerHeight) {
+            handleScroll(); // Call your function when the section is scrolled to
+        }
+
+        function handleScroll() {
+            // Your code to be executed when the section is scrolled to
+            $('.selected').hide(1500);
+        }
+    };*/
+
+
 </script>
 <script>
     // Add the "start-animation" class to the div to trigger the animation

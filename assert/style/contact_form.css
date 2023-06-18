@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
 
 
-form {
+.contact form {
     font-size: 19px;
     line-height: 20px;
     color: #ffffff;
@@ -12,13 +12,13 @@ form {
 
 }
 
-[type="text"],
-textarea,
-[type="button"] {
+.contact [type="text"],
+.contact textarea,
+.contact [type="button"] {
     border-radius: 5px;
 }
 
-[type="button"] {
+.contact [type="button"] {
     background: #1a2530;
     display: inline-block;
     padding: 0.3em 1em 0.5em;
@@ -32,50 +32,50 @@ textarea,
     font-size: 90%;
 }
 
-[type="button"]:focus {
+.contact [type="button"]:focus {
     background: #3498db;
     color: white;
 }
 
-[type="button"]:hover {
+.contact [type="button"]:hover {
     background: #27ae60;
     color: white;
 }
 
-[type="button"]:active {
+.contact [type="button"]:active {
     background: #1a2530;
     color: white;
 }
 
 
-input,
-textarea {
+.contact input,
+.contact textarea {
     -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
 }
 
 
-input:hover,
-textarea:hover {
+.contact input:hover,
+.contact textarea:hover {
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
 }
 
-Codegena {
+.contact Codegena {
     font-size: 35px;
     margin-bottom: 10px;
     color: #2980b9;
 }
 
 
-input,
-textarea {
+.contact input,
+.contact textarea {
     font-size: 100%;
     height: 45px;
 }
 
-input:focus,
-textarea:focus {
+.contact input:focus,
+.contact textarea:focus {
     outline: none;
     border: 1px solid #2980b9;
     background: #1a2530;
@@ -83,12 +83,12 @@ textarea:focus {
 }
 
 
-::-webkit-input-placeholder {
+.contact ::-webkit-input-placeholder {
     color: rgba(41, 128, 185, 0.3);
 }
 
-[type="text"],
-textarea {
+.contact [type="text"],
+.contact textarea {
     border: none;
     background: inherit;
     color: #94bfdc;
@@ -98,35 +98,35 @@ textarea {
     -webkit-filter: blur(5px);
 }
 
-[type="text"]:focus,
-textarea:focus {
+.contact [type="text"]:focus,
+.contact textarea:focus {
     -webkit-filter: blur(0px);
 }
 
-.stage {
+.contact .stage {
     max-width: 500px;
     width: 80%;
 }
 
-.items_in_card li {
+.contact .items_in_card li {
     text-decoration: none;
     list-style-type: none;
 
 }
-.items_in_card a{
+.contact .items_in_card a{
     color: white;
     text-decoration: none;
 }
-.items_in_card a:visited{
+.contact .items_in_card a:visited{
     color: #0a3622;
 }
-.items_in_card a:hover{
+.contact .items_in_card a:hover{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     outline: 2px solid;
     outline-offset: -2px;
     background-image: linear-gradient(to right, #ff9a9e, #fad0c4);
 }
-.items_in_card li:hover{
+.contact .items_in_card li:hover{
     font-size: 28px;
 
 }

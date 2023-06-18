@@ -1,0 +1,71 @@
+/* Reset default styles for a clean slate */
+
+
+/* Set up styles for the footer */
+.night-fury-footer {
+    background-color: #1a1a1a;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.night-fury-image {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-text {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.social-links {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.social-links li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.social-links a {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+/* Add responsive styles for PC and mobile devices */
+/* For PC */
+@media only screen and (min-width: 768px) {
+    .night-fury-footer {
+        padding: 20px 40px;
+    }
+
+    .footer-text {
+        font-size: 16px;
+    }
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+    .night-fury-footer {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .night-fury-image {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

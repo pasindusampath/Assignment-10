@@ -40,6 +40,9 @@ body{
     animation: anim 5s ease forwards;
 
 }
+.hamburger{
+    display: none;
+}
 .active ,.navbar a:hover{
     background: linear-gradient(45deg,#f06 ,#3cf);
     -webkit-text-fill-color: transparent;
@@ -326,6 +329,7 @@ body{
         width: 55px;
         height: 55px;
         font-size: 34px;
+        margin: 20px 10px;
     }
     .home-content h1 {
         font-size: 41px;
@@ -377,6 +381,71 @@ body{
     }
     .assignments-all{
         padding-top: 70px;
+    }
+
+    @media all and (max-width: 450px){
+        .hamburger{
+            display: block;
+        }
+        .navbar{
+            display: none;
+        }
+        .home{
+            margin-top: 50px;
+            height: 100%;
+            flex-direction: column-reverse;
+        }
+        .home-image{
+            margin-top: 100px;
+        }
+        .home-content {
+            display: flex;
+            max-width: 500px;
+            flex-direction: column;
+        }
+        .home-content h1 {
+            margin-top: 20px;
+            font-size: 26px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .home-content h3 {
+            font-size: 25px;
+            text-align: center;
+            font-weight: 100;
+        }
+        .btn{
+            align-self: center;
+        }
+        .terminal {
+            text-align: center;
+            height: 258px;
+        }
+        .social-media-container {
+            margin-right: 0px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .about{
+            flex-direction: column;
+        }
+        .about-me{
+            height: 100%;
+        }
+        .content h2{
+            font-size: 3em;
+            width: 100%;
+            text-align: center;
+        }
+        .about-me .image{
+            margin-top: 50px;
+        }
+        .about-me .details h3{
+            font-size: 15px;
+            text-align: center;
+        }
+
+
     }
 
 }
