@@ -131,7 +131,7 @@ body{
 .terminal{
     height: 200px;
 }
-.home-image{
+.homeimage{
 
 }
 .social-media-container{
@@ -190,7 +190,7 @@ body{
     transform: scale(0);
 }
 
-.home-image{
+.homeimage{
     width: 500px;
     height: 500px;
 }
@@ -334,7 +334,7 @@ body{
     .home-content h1 {
         font-size: 41px;
     }
-    .home-image{
+    .homeimage{
         width: 300px;
         height: 300px;
     }
@@ -395,7 +395,7 @@ body{
             height: 100%;
             flex-direction: column-reverse;
         }
-        .home-image{
+        .homeimage{
             margin-top: 100px;
         }
         .home-content {
