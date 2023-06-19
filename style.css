@@ -5,6 +5,9 @@
     box-sizing: border-box;
     font-family: 'Poppins' , sans-serif ;
 }
+.blur-background{
+    display: none;
+}
 
 body{
     background: #0c1022;
@@ -233,16 +236,16 @@ body{
 
 .glowing-circle span{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 99%;
+    height: 99%;
     background: linear-gradient(180deg ,  #f06 ,#3cf);
     border-radius: 50%;
 }
 .glowing-circle span::after{
     position: absolute;
     content: '';
-    width: 100%;
-    height: 100%;
+    width: 99%;
+    height: 99%;
     background: linear-gradient(180deg ,#3cf,  #f06 );
     border-radius: 50%;
     animation: rotate 15s infinite;
@@ -322,6 +325,8 @@ body{
     width : 600px;
     height : 400px;
 }
+
+
 
 @media all and (max-width: 1400px){
 
@@ -445,6 +450,32 @@ body{
             text-align: center;
         }
 
+        .blur-background{
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: black;
+            opacity: 87%;
+        }
+        .blur-background>div{
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: white;
+            font-size: 30px;
+            margin: 10px;
+            border: 2px solid white;
+            display: flex;
+        }
+
+        .close-button>i{
+            transition: transform 0.3s ease;
+        }
+
+        .close-button>i:hover{
+            transform: rotate(180deg);
+        }
 
     }
 

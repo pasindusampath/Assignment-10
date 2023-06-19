@@ -153,6 +153,9 @@
         </div>
     </div>
     <div class="paragraphs">
+        <div class="blur-background">
+            <div class="close-button"><i class='bx bx-x'></i></div>
+        </div>
         <div class="gradient-border">
             <div class="paragraph-about-card">
                 <p class="paragraph">
@@ -511,19 +514,24 @@
         var buttons = $('.card-back-button');
 
         buttons.each(function (index) {
+
             console.log(index);
             //console.log("Button " + (index + 1) + ": ", $(this));
             // Perform any desired operations on each button
             $(this).click(
                 function () {
                     //if($(this).hasClass("selected")){return;}
-
+                    $('.paragraphs').eq(0).css({"display":"flex"});
                     $('.selected').hide(500);
                     $('.paragraph-about-card').eq(index).addClass('selected');
                     $('.paragraph-about-card').eq(index).hide();
                     $('.paragraph-about-card').eq(index).show(1000)
                 }
             );
+        });
+
+        $('.close-button').eq(0).click(()=>{
+            $('.paragraphs').eq(0).css({"display":"none"});
         });
     });
 
