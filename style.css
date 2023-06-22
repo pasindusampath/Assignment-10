@@ -1,31 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=poppins :wght@300;400;500;600;700;800;900& display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins' , sans-serif ;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
-.blur-background{
+
+.blur-background {
     display: none;
 }
 
-body{
+.background {
+    display: none;
+}
+
+body {
     background: #0c1022;
     color: #fff;
 }
-.header{
+
+.header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding:20px 10% ;
+    padding: 20px 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
     background-color: #0c1022;
 }
-.logo{
+
+.logo {
     font-size: 25px;
     color: white;
     text-decoration: none;
@@ -33,31 +42,34 @@ body{
     pointer-events: none;
     animation: anim 1s ease forwards;
 }
-.navbar a{
+
+.navbar a {
     font-size: 18px;
     color: white;
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
-    animation-delay: calc(5s * var(--i) );
+    animation-delay: calc(5s * var(--i));
     animation: anim 5s ease forwards;
 
 }
-.hamburger{
+
+.hamburger {
     display: none;
 }
-.active ,.navbar a:hover{
-    background: linear-gradient(45deg,#f06 ,#3cf);
+
+.active, .navbar a:hover {
+    background: linear-gradient(45deg, #f06, #3cf);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 
 }
 
-.home-content{
+.home-content {
     max-width: 500px;
 }
 
-.home{
+.home {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -65,22 +77,25 @@ body{
     align-items: center;
     padding: 70px 10% 0;
 }
-.home-content h1{
+
+.home-content h1 {
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
 }
-.home-content h3{
+
+.home-content h3 {
     font-size: 32px;
     font-weight: 700;
 }
-.home-content p{
+
+.home-content p {
     font-size: 16px;
     margin: 20px 0 40px;
 
 }
 
-.btn{
+.btn {
     position: relative;
     display: inline-flex;
     justify-content: center;
@@ -96,13 +111,14 @@ body{
     z-index: 1;
 
 }
-.btn::before{
-    content:' ';
+
+.btn::before {
+    content: ' ';
     position: absolute;
     top: 0;
     left: 0;
     inset: 0;
-    background: linear-gradient(45deg , #f06 ,#3cf,#f06);
+    background: linear-gradient(45deg, #f06, #3cf, #f06);
     background-position: 0 0;
     background-size: 200%;
     z-index: -1;
@@ -111,13 +127,13 @@ body{
     transition: .5s ease;
 }
 
-.btn::after{
-    content:' ';
+.btn::after {
+    content: ' ';
     position: absolute;
     top: 0;
     left: 0;
     inset: 0;
-    background: linear-gradient(45deg , #f06 ,#3cf,#f06);
+    background: linear-gradient(45deg, #f06, #3cf, #f06);
     background-position: 0 0;
     background-size: 200%;
     z-index: -1;
@@ -125,23 +141,28 @@ body{
     transition: .5s ease;
 
 }
-.btn:hover::after{
+
+.btn:hover::after {
     background-position: 100% 0;
 }
-.btn:hover::before{
+
+.btn:hover::before {
     background-position: 100% 0;
 }
-.terminal{
+
+.terminal {
     height: 200px;
 }
-.homeimage{
+
+.homeimage {
 
 }
-.social-media-container{
+
+.social-media-container {
     margin-right: 80px;
 }
 
-.social-media-container a{
+.social-media-container a {
     position: relative;
     display: flex;
     justify-content: center;
@@ -150,55 +171,56 @@ body{
     height: 60px;
     font-size: 50px;
     text-decoration: none;
-    background : linear-gradient(45deg , #f06 ,#3cf);
+    background: linear-gradient(45deg, #f06, #3cf);
     color: white;
     border-radius: 50%;
     margin: 20px 0;
     z-index: 1;
 
 }
-.social-media-container a::before{
+
+.social-media-container a::before {
     content: ' ';
     position: absolute;
     width: 100%;
     height: 100%;
-    background : linear-gradient(45deg , #f06 ,#3cf);
+    background: linear-gradient(45deg, #f06, #3cf);
     border-radius: 50%;
     z-index: -1;
     transition: .5s ease;
 
 }
 
-.social-media-container a:hover::before{
+.social-media-container a:hover::before {
     filter: blur(5px);
 }
 
-.social-media-container a:hover{
+.social-media-container a:hover {
     color: black;
 }
 
-.social-media-container a::after{
+.social-media-container a::after {
     content: ' ';
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: #0c1022;
     border-radius: 50%;
-    transform:scale(.88) ;
+    transform: scale(.88);
     z-index: -1;
     transition: .5s ease;
 }
 
-.social-media-container a:hover::after{
+.social-media-container a:hover::after {
     transform: scale(0);
 }
 
-.homeimage{
+.homeimage {
     width: 500px;
     height: 500px;
 }
 
-.glowing-circle{
+.glowing-circle {
     position: relative;
     display: flex;
     width: 500px;
@@ -207,7 +229,8 @@ body{
     justify-content: center;
     align-items: center;
 }
-.glowing-circle .image{
+
+.glowing-circle .image {
     position: relative;
     background-color: #0c1022;
     width: 490px;
@@ -217,7 +240,7 @@ body{
     overflow: hidden;
 }
 
-.glowing-circle::after{
+.glowing-circle::after {
     content: '';
     position: absolute;
     width: 480px;
@@ -226,7 +249,7 @@ body{
     border-radius: 50%;
 }
 
-.image img{
+.image img {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -234,249 +257,333 @@ body{
     object-fit: cover;
 }
 
-.glowing-circle span{
+.glowing-circle span {
     position: absolute;
     width: 99%;
     height: 99%;
-    background: linear-gradient(180deg ,  #f06 ,#3cf);
+    background: linear-gradient(180deg, #f06, #3cf);
     border-radius: 50%;
 }
-.glowing-circle span::after{
+
+.glowing-circle span::after {
     position: absolute;
     content: '';
     width: 99%;
     height: 99%;
-    background: linear-gradient(180deg ,#3cf,  #f06 );
+    background: linear-gradient(180deg, #3cf, #f06);
     border-radius: 50%;
     animation: rotate 15s infinite;
     animation-direction: alternate-reverse;
 }
+
 @keyframes rotate {
-    0%{
+    0% {
         transform: rotate(0);
     }
-    100%{
+    100% {
         transform: rotate(360deg);
     }
 }
-.glowing-circle span:nth-child(2){
+
+.glowing-circle span:nth-child(2) {
     filter: blur(10px);
 }
 
 
 @keyframes anim {
-    0%{
+    0% {
         opacity: 0;
         transform: translateY(100px);
     }
-    100%{
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-.about-me{
+.about-me {
     position: relative;
     margin: 70px 10% 0;
     height: 80vh;
 
 }
-.about{
+
+.about {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100%;
 }
-#canv{
-    align-self:center;
-    cursor:move;
+
+#canv {
+    align-self: center;
+    cursor: move;
 }
-.details{
+
+.details {
     margin: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.details h3{
+
+.details h3 {
     font-size: 30px;
     margin: 10px;
 }
-.details h3 a{
+
+.details h3 a {
     color: mediumspringgreen;
 }
-.topic{
+
+.topic {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.topic h1{
+
+.topic h1 {
     text-align: center;
     font-weight: 50;
     font-size: 40px;
 }
-.selected{
+
+.selected {
     display: block;
 }
-.contact{
+
+.contact {
     display: flex;
     margin: 70px 10% 0;
 }
-#canv{
-    width : 600px;
-    height : 400px;
+
+#canv {
+    width: 600px;
+    height: 400px;
 }
 
 
+@media all and (max-width: 1400px) {
 
-@media all and (max-width: 1400px){
-
-    .social-media-container a{
+    .social-media-container a {
         width: 55px;
         height: 55px;
         font-size: 34px;
         margin: 20px 10px;
     }
+
     .home-content h1 {
         font-size: 41px;
     }
-    .homeimage{
+
+    .homeimage {
         width: 300px;
         height: 300px;
     }
-    .image img{
+
+    .image img {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
         max-width: 500px;
         object-fit: cover;
     }
-    .about-me{
+
+    .about-me {
         padding-top: 100px;
     }
-    .glowing-circle{
+
+    .glowing-circle {
         width: 305px;
         height: 305px;
     }
-    .glowing-circle .image{
+
+    .glowing-circle .image {
         width: 300px;
         height: 300px;
     }
+
     .glowing-circle::after {
         width: 280px;
         height: 280px;
     }
+
     .details h3 {
         font-size: 19px;
     }
-    #canv{
-        width : 300px;
-        height : 200px;
+
+    #canv {
+        width: 300px;
+        height: 200px;
     }
-    .assignments{
+
+    .assignments {
         display: flex;
         justify-content: space-between;
         padding: 70px 10% 0;
         flex-direction: column;
     }
-    .contact{
+
+    .contact {
         display: flex;
         justify-content: space-between;
         padding: 70px 10% 0;
         flex-direction: column;
     }
-    .assignments-all{
+
+    .assignments-all {
         padding-top: 70px;
     }
+}
 
-    @media all and (max-width: 450px){
-        .hamburger{
-            display: block;
-        }
-        .navbar{
-            display: none;
-        }
-        .home{
-            margin-top: 50px;
-            height: 100%;
-            flex-direction: column-reverse;
-        }
-        .homeimage{
-            margin-top: 100px;
-        }
-        .home-content {
-            display: flex;
-            max-width: 500px;
-            flex-direction: column;
-        }
-        .home-content h1 {
-            margin-top: 20px;
-            font-size: 26px;
-            text-transform: uppercase;
-            text-align: center;
-        }
-        .home-content h3 {
-            font-size: 25px;
-            text-align: center;
-            font-weight: 100;
-        }
-        .btn{
-            align-self: center;
-        }
-        .terminal {
-            text-align: center;
-            height: 258px;
-        }
-        .social-media-container {
-            margin-right: 0px;
-            display: flex;
-            justify-content: space-between;
-        }
-        .about{
-            flex-direction: column;
-        }
-        .about-me{
-            height: 100%;
-        }
-        .content h2{
-            font-size: 3em;
-            width: 100%;
-            text-align: center;
-        }
-        .about-me .image{
-            margin-top: 50px;
-        }
-        .about-me .details h3{
-            font-size: 15px;
-            text-align: center;
-        }
+@media all and (max-width: 450px) {
+    .hamburger {
+        display: block;
+        font-size: 50px;
 
-        .blur-background{
-            position: absolute;
-            display: block;
-            width: 100%;
-            height: 100%;
-            background: black;
-            opacity: 87%;
-        }
-        .blur-background>div{
-            position: absolute;
-            right: 0;
-            top: 0;
-            color: white;
-            font-size: 30px;
-            margin: 10px;
-            border: 2px solid white;
-            display: flex;
-        }
+    }
 
-        .close-button>i{
-            transition: transform 0.3s ease;
-        }
+    .hamburger > i {
+        transition: transform 0.3s ease;
+    }
 
-        .close-button>i:hover{
-            transform: rotate(180deg);
-        }
+    .hamburger > i:hover {
+        transform: rotate(90deg);
+    }
 
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 65px;
+        right: 0;
+        align-self: baseline;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: end;
+        height: 301px;
+        width: 150px;
+        padding: 20px;
+    }
+
+    .home {
+        margin-top: 50px;
+        height: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .homeimage {
+        margin-top: 100px;
+    }
+
+    .home-content {
+        display: flex;
+        max-width: 500px;
+        flex-direction: column;
+    }
+
+    .home-content h1 {
+        margin-top: 20px;
+        font-size: 26px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .home-content h3 {
+        font-size: 25px;
+        text-align: center;
+        font-weight: 100;
+    }
+
+    .btn {
+        align-self: center;
+    }
+
+    .terminal {
+        text-align: center;
+        height: 258px;
+    }
+
+    .social-media-container {
+        margin-right: 0px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-me {
+        height: 100%;
+    }
+
+    .content h2 {
+        font-size: 3em;
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-me .image {
+        margin-top: 50px;
+    }
+
+    .about-me .details h3 {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .blur-background {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: 87%;
+    }
+
+    .blur-background > div {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: white;
+        font-size: 30px;
+        margin: 10px;
+        border: 2px solid white;
+        display: flex;
+    }
+
+    .close-button > i {
+        transition: transform 0.3s ease;
+    }
+
+    .close-button > i:hover {
+        transform: rotate(180deg);
+    }
+
+    .navbar > a {
+        animation: anim 2s ease;
+    }
+
+    .background {
+        position: absolute;
+        margin-top: 536px;
+        left: 0px;
+        display: none;
+        background: #0c1022eb;
+        width: 100vw;
+        height: 150vh;
+        z-index: -1;
+    }
+
+    @keyframes anim {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
 
 }
+

@@ -31,7 +31,7 @@
 .front,
 .back{
     background-size: cover;
-    box-shadow: 0 4px 8px 0 rgba(255, 150, 222, 0.95);
+    box-shadow: 0 4px 8px 0 rgb(3 49 76 / 95%);
     border-radius: 10px;
     background-position: center;
     -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
@@ -47,6 +47,10 @@
     border-radius: 10px;
     color: #fff;
     font-size: 1.5rem;
+}
+.front{
+    /*background: linear-gradient(136deg, black, gray,blue);*/
+    background-image: linear-gradient(to right, #141e30, #243b55);
 }
 
 .back{
@@ -85,15 +89,21 @@
     top: 0;
     left: 0;
     width: 100%;
+    background: linear-gradient(43deg, #61042c 0%,#0e1601 66%, #074c4f 100%);
 }
 
+
 .inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
     transform: translateY(-50%) translateZ(60px) scale(0.94);
     top: 50%;
     position: absolute;
     left: 0;
     width: 100%;
+    height: 100%;
     padding: 2rem;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -155,6 +165,100 @@
     font-family: 'Montserrat';
     font-weight: 300;
 }
+
+.items_in_card>li::marker {
+    content: ">"
+}
+
+.items_in_card>li:hover::marker {
+    content: "+";
+}
+
+.items_in_card>li>a,.inner>p{
+    all: unset;
+    color: lightyellow;
+    font-family: Bad Script;
+    text-shadow:
+            0 0 10px yellow,
+            0 0 20px orange,
+            0 0 40px brown,
+            0 0 80px purple;
+    will-change: filter, color;
+    filter: saturate(60%);
+}
+
+.items_in_card>li>a:hover{
+    text-shadow:
+            0 0 10px #f6f66e,
+            0 0 20px #f8c666,
+            0 0 40px #f67878,
+            0 0 80px #e862e8;
+}
+
+.inner>a>button{
+    margin: 30px;
+    color: #fff;
+    width: 130px;
+    height: 40px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+.inner>a>button {
+    position: relative;
+    color: #00aced;
+    border: none;
+    z-index: 2;
+}
+.inner>a>button:before,
+.inner>a>button:after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    border: 1px solid;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+.inner>a>button:before{
+    top: 0;
+    left: 0;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-top-color: #00aced;
+    border-left-color: #00aced;
+}
+.inner>a>button:after{
+    bottom: 0;
+    right: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: #00aced;
+    border-right-color: #00aced;
+}
+.inner>a>button:hover:before,
+.inner>a>button:hover:after {
+    border-color: #00aced;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 5px #00aced, 0 0 5px #00aced inset;
+}
+
+
+
+/*text-shadow:
+0 0 10px var(--color1),
+0 0 20px var(--color2),
+0 0 40px var(--color3),
+0 0 80px var(--color4);
+will-change: filter, color;
+filter: saturate(60%);*/
+
 
 @media screen and (max-width: 64rem){
     .col{
