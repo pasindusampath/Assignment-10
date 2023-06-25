@@ -50,14 +50,15 @@
 }
 .front{
     /*background: linear-gradient(136deg, black, gray,blue);*/
-    background-image: linear-gradient(to right, #141e30, #243b55);
+
+    background-image: linear-gradient(327deg, #FF057C 0%, #8D0B93 50%, #321575 100%);
 }
 
 .back{
     background: #cedce7;
     background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
     background: -o-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
-    background: linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+    background-image: linear-gradient(to right, #141e30, #243b55);
 }
 
 .front:after{
@@ -97,6 +98,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
     transform: translateY(-50%) translateZ(60px) scale(0.94);
     top: 50%;
@@ -142,7 +144,7 @@
 }
 
 .front .inner p{
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
     position: relative;
 }
@@ -167,11 +169,11 @@
 }
 
 .items_in_card>li::marker {
-    content: ">"
+    content: "👾"
 }
 
 .items_in_card>li:hover::marker {
-    content: "+";
+    content: "🤖";
 }
 
 .items_in_card>li>a,.inner>p{
