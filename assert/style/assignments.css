@@ -51,7 +51,8 @@
 .front{
     /*background: linear-gradient(136deg, black, gray,blue);*/
 
-    background-image: linear-gradient(327deg, #FF057C 0%, #8D0B93 50%, #321575 100%);
+   /* background-image: linear-gradient(327deg, #FF057C 0%, #8D0B93 50%, #321575 100%);*/
+    background-image: linear-gradient(to right, #141e30, #243b55);
 }
 
 .back{
