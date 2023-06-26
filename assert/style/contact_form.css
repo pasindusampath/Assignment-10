@@ -134,7 +134,12 @@
 .root{
     margin-top: 100px;
 }
-
+#contact-section textarea{
+    min-height: 150px;
+    background-color: transparent;
+    color: white;
+    min-width: 100%;
+}
 #contact-section .buttons {
     flex-flow: column;
 }
@@ -293,12 +298,7 @@
     line-height: 1.33333333;
     margin-bottom: 24px;
 }
-@media (min-width: 960px) {
-    #contact-section .title {
-        font-size: 32px;
-        line-height: 1.25;
-    }
-}
+
 #contact-section .description {
     line-height: inherit;
     margin: 0 0 24px;
@@ -326,6 +326,7 @@
     margin: -8px;
 }
 #contact-section .buttons .button {
+    color: white;
     margin: 8px;
     padding: 11px 32px;
     font-weight: 900;
@@ -611,7 +612,7 @@
 #contact-section .back {
     padding: 28px;
 }
-@media (min-width: 960px) {
+@media (min-width: 450px) {
     #contact-section .back {
         padding: 40px;
     }
@@ -625,8 +626,20 @@
     outline: 3px solid #ffffff;
     outline-offset: 10px;
 }
-@media (min-width: 960px) {
-    #contact-section .container {
-        outline-offset: 20px;
+@media all and (max-width: 450px) {
+    #contact-section .title {
+        font-size: 19px;
+        line-height: 1.25;
     }
+    #contact-section .container{
+        font-size: 13px;
+    }
+    #contact-section .input-text, #contact-section .input-textarea, #contact-section .input-select {
+        font-size: 12px;
+        width: 100%;
+
+    }
+}
+@media (min-width: 450px) {
+
 }

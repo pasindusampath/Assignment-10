@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="boxicons" level="application" />
     <orderEntry type="library" name="es-module-shims" level="application" />
+    <orderEntry type="library" name="kursor" level="application" />
   </component>
 </module>

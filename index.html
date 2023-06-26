@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="assert/style/footer.css">
     <link rel="stylesheet" href="assert/style/panda.css">
     <link rel="stylesheet" href="assert/style/ghost.css">
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="assert/lib/aos-master/dist/aos.css" rel="stylesheet">
 </head>
@@ -562,11 +563,6 @@
         </form>-->
         <div class="root page-1 page-first" role="dialog">
             <div class="container">
-                <div class="images"><img
-                        src="https://m.getform.com/images/47/8a6471520c5b3ee960e184938359967b_227982536.jpg"
-                        class="image"
-                        style="position: absolute; object-fit: cover; object-position: 50% 35%; left: 50%; transform: translateX(-50%); top: 0px; width: 100%; height: 200px;">
-                </div>
                 <div class="body">
                     <div class="content">
                         <h1 class="title">
@@ -575,12 +571,13 @@
                         <p class="description">
                         <div>Fill in the form below to book a consultation with me.</div>
                         </p>
-                        <form novalidate="" class="form valid pristine">
+                        <form novalidate="" class="form valid pristine" name="contactForm">
                             <div class="fields">
                                 <div class="field text first with-label valid"><label class="field-title" for="name">
                                     <div>Name</div>
                                 </label><input id="name" class="input-text" required="" type="text" name="name"
-                                               placeholder="Enter your name"></div>
+                                               placeholder="Enter your name">
+                                </div>
                                 <div class="field email with-label valid"><label class="field-title" for="email">
                                     <div>Email</div>
                                 </label><input id="email" class="input-text" required="" type="email" name="email"
@@ -589,9 +586,17 @@
                                     <div>Phone number</div>
                                 </label><input id="phone" class="input-text" required="" type="text" name="phone"
                                                placeholder="+1 (XXX) XXX XXXX"></div>
+                                <div class="field text last with-label valid">
+                                    <label class="field-title" for="message">
+                                        <div>Message</div>
+                                    </label>
+                                    <textarea id="message" placeholder="Message" class="field"
+                                              name="message"></textarea>
+                                </div>
                             </div>
                             <div class="buttons">
-                                <button type="submit" class="button primary"><span>BOOK A CALL</span></button>
+                                <button type="submit" class="button primary magic-hover magic-hover__square" onclick="sendEmail(event)"><span>BOOK A CALL</span>
+                                </button>
                             </div>
                         </form>
                     </div>
@@ -614,15 +619,15 @@
         <div class="row">
             <ul>
                 <li><a href="#home-section">Home</a></li>
-                <li><a >About</a></li>
-                <li><a >Projects</a></li>
-                <li><a >Assignments</a></li>
-                <li><a >Contact</a></li>
+                <li><a>About</a></li>
+                <li><a>Projects</a></li>
+                <li><a>Assignments</a></li>
+                <li><a>Contact</a></li>
             </ul>
         </div>
 
         <div class="row">
-            Copyright © 2023  All rights reserved || Designed By: Pasindu Sampath
+            Copyright © 2023 All rights reserved || Designed By: Pasindu Sampath
         </div>
     </div>
 </footer>
@@ -739,5 +744,46 @@
             return this.nodeType === 3 && this.textContent.trim() !== '';
         }).wrap('<span class="animated-letter"></span>');
     });
+</script>
+<script src="assert/style/cursor.js"></script>
+<script>
+    options = {
+        "outerStyle": "circle-basic",
+        "hoverEffect": "pointer-blur",
+        "hoverItemMove": false,
+        "defaultCursor": true,
+        "outerWidth": 41,
+        "outerHeight": 41
+    };
+    magicMouse(options);
+    /*function update(e){
+        var x = e.clientX || e.touches[0].clientX
+        var y = e.clientY || e.touches[0].clientY
+
+        document.documentElement.style.setProperty('--cursorX', x + 'px')
+        document.documentElement.style.setProperty('--cursorY', y + 'px')
+    }
+
+    document.addEventListener('mousemove',update)
+    document.addEventListener('touchmove',update)*/
+</script>
+<script>
+    function sendEmail(event) {
+        event.preventDefault(); // Prevent form submission
+
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var phone = document.getElementById('phone').value;
+        var message = document.getElementById('message').value;
+
+        var subject = "New contact form submission";
+        var body = "Name: " + name + "\nEmail: " + email + "\nPhone: " + phone + "\nMessage: " + message;
+
+        var mailtoLink = "mailto:pasindusampath2@gmail.com" +
+            "?subject=" + encodeURIComponent(subject) +
+            "&body=" + encodeURIComponent(body);
+
+        window.location.href = mailtoLink;
+    }
 </script>
 </html>
