@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{boxicons, es-module-shims, kursor}" />
+    <file url="PROJECT" libraries="{bootstrap, boxicons, es-module-shims, font-awesome, kursor}" />
   </component>
 </project>

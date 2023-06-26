@@ -1,6 +1,7 @@
 #app-cover {
     position: sticky;
     top: 30%;
+    left: 8%;
     transform: scale(2);
     align-self: baseline;
 }

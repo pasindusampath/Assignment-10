@@ -22,8 +22,10 @@
     <link rel="stylesheet" href="assert/style/footer.css">
     <link rel="stylesheet" href="assert/style/panda.css">
     <link rel="stylesheet" href="assert/style/ghost.css">
+    <link rel="stylesheet" href="assert/style/skills.css">
     <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="assert/lib/aos-master/dist/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -42,10 +44,10 @@
 </header>
 <section id="home-section" class="home">
     <div data-aos="flip-right" class="social-media-container">
-        <a href="#https://web.facebook.com/PASINDU.T.B"><i class="bx bxl-facebook"></i></a>
-        <a href="#https://wa.me/+94787149579"><i class='bx bxl-whatsapp'></i></a>
-        <a href="#https://www.linkedin.com/in/pasindu-tb"><i class='bx bxl-linkedin'></i></a>
-        <a href="#https://github.com/pasindusampath"><i class='bx bxl-github'></i></a>
+        <a href="https://web.facebook.com/PASINDU.T.B" target="_blank"><i class="bx bxl-facebook"></i></a>
+        <a href="https://wa.me/+94787149579" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+        <a href="https://www.linkedin.com/in/pasindu-tb" target="_blank"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://github.com/pasindusampath" target="_blank"><i class='bx bxl-github'></i></a>
     </div>
     <div class="home-content">
         <h1 data-aos="fade-up">
@@ -342,11 +344,11 @@
         </div>
     </div>
 </section>
-<section id="assignments" class="assignments">
+<section id="skills-section">
     <div class="topic">
         <div class="content">
-            <h2>Assignments</h2>
-            <h2>Assignments</h2>
+            <h2>Skills</h2>
+            <h2>Skills</h2>
         </div>
     </div>
     <div data-aos="fade-up" id="app-cover">
@@ -365,6 +367,65 @@
             <div id="legs"></div>
         </div>
     </div>
+    <div class="skills">  <!-- create a div -->
+        <h1>My Skills</h1> <!-- heading -->
+        <li data-aos="fade-right">
+            <i class="fas fa-java"></i>
+            <h3>JAVA</h3><span class="bar"><span class="java"></span></span><!-- skill bar 4 -->
+        </li>
+        <li data-aos="fade-left">
+            <i class="fas fa-database"></i>
+            <h3>MYSQL</h3><span class="bar"><span class="mysql"></span></span><!-- skill bar 4 -->
+        </li>
+        <li data-aos="fade-right">
+            <i class="fab fa-java"></i>
+            <h3>JAVAFX</h3><span class="bar"><span class="javafx"></span></span><!-- skill bar 4 -->
+        </li>
+        <li data-aos="fade-left">
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="IconChangeColor" height="40"
+                 width="40"><title>Hibernate</title>
+                <path d="M5.365 0L9.98 7.994h8.95L14.31 0H5.366zm-.431.248L.46 7.994l4.613 8.008L9.55 8.24 4.934.248zm13.992 7.75l-4.475 7.76 4.617 7.992 4.471-7.744-4.613-8.008zm-4.905 8.006l-8.95.002L9.688 24h8.946l-4.615-7.994.001-.002Z"
+                      id="mainIconPathAttribute" filter="url(#shadow)" fill="#ffffff" stroke-width="0.4"
+                      stroke="#141010"></path>
+                <filter id="shadow">
+                    <feDropShadow id="shadowValue" stdDeviation=".5" dx="0" dy="0" flood-color="black"></feDropShadow>
+                </filter>
+                <filter id="shadow">
+                    <feDropShadow id="shadowValue" stdDeviation=".5" dx="0" dy="0" flood-color="black"></feDropShadow>
+                </filter>
+            </svg>
+            <h3>HIBERNATE</h3><span class="bar"><span class="hibernate"></span></span><!-- skill bar 4 -->
+        </li>
+        <li data-aos="fade-right">
+            <i class="fab fa-html5"></i>
+            <h3>HTML</h3><span class="bar"><span class="html"></span></span> <!-- skill bar 1 -->
+        </li>
+
+        <li data-aos="fade-left">
+            <i class="fab fa-css3-alt"></i>
+            <h3>CSS</h3><span class="bar"><span class="css"></span></span><!-- skill bar 2 -->
+        </li>
+
+        <li data-aos="fade-right">
+            <i class="fab fa-js"></i>
+            <h3>JAVASCRIPT</h3><span class="bar"><span class="javascript"></span></span><!-- skill bar 3 -->
+        </li>
+
+        <li data-aos="fade-left">
+            <i class="fab fa-js-square"></i>
+            <h3>JQUERY</h3><span class="bar"><span class="jquery"></span></span><!-- skill bar 4 -->
+        </li>
+
+    </div>
+</section>
+<section id="assignments" class="assignments">
+    <div class="topic">
+        <div class="content">
+            <h2>Assignments</h2>
+            <h2>Assignments</h2>
+        </div>
+    </div>
+
     <div class="assignments-all">
         <div class="wrapper">
             <div class="cols">
@@ -535,33 +596,7 @@
                 <h2>Contact</h2>
             </div>
         </div>
-        <!--<form name="contact-form" class="stage">
-            <Codegena>Contact Me</Codegena>
-            <p></p>
-            Name:
-            <br/>
-            <input class="contact-form-name" id="ContactForm1_contact-form-name" name="name" size="30" value=""
-                   type="text" placeholder="What should I call you?" required/>
-            <p></p>
-            E-mail:
-            <span style="font-weight: bolder;color:red;">*</span>
-            <br/>
-            <input class="contact-form-email" id="ContactForm1_contact-form-email" name="email" size="30" value=""
-                   type="text" placeholder="Where can I reach you?" required/>
-            <p></p>
-            Message: <span style="font-weight: bolder;color:red;">*</span>
-            <br/>
-            <textarea class="contact-form-email-message" id="ContactForm1_contact-form-email-message"
-                      name="email-message" cols="25" rows="5" placeholder="What's on your mind?" required></textarea>
-            <p></p>
-            <input class="contact-form-button contact-form-button-submit" id="ContactForm1_contact-form-submit"
-                   value="Send" type="button"/>
-            <p></p>
-            <div style="text-align: center; max-width: 222px; width: 100%">
-                <p class="contact-form-error-message" id="ContactForm1_contact-form-error-message"></p>
-                <p class="contact-form-success-message" id="ContactForm1_contact-form-success-message"></p>
-            </div>
-        </form>-->
+
         <div class="root page-1 page-first" role="dialog">
             <div class="container">
                 <div class="body">
@@ -596,7 +631,8 @@
                                 </div>
                             </div>
                             <div class="buttons">
-                                <button type="submit" class="button primary magic-hover magic-hover__square" onclick="sendEmail(event)"><span>BOOK A CALL</span>
+                                <button type="submit" class="button primary magic-hover magic-hover__square"
+                                        onclick="sendEmail(event)"><span>BOOK A CALL</span>
                                 </button>
                             </div>
                         </form>
@@ -607,14 +643,15 @@
         </div>
     </div>
 </section>
+
 </body>
 <footer>
     <div class="footer">
         <div class="row">
-            <a href="#https://web.facebook.com/PASINDU.T.B"><i class="bx bxl-facebook"></i></a>
-            <a href="#https://wa.me/+94787149579"><i class='bx bxl-whatsapp'></i></a>
-            <a href="#https://www.linkedin.com/in/pasindu-tb"><i class='bx bxl-linkedin'></i></a>
-            <a href="#https://github.com/pasindusampath"><i class='bx bxl-github'></i></a>
+            <a href="https://web.facebook.com/PASINDU.T.B" target="_blank"><i class="bx bxl-facebook"></i></a>
+            <a href="https://wa.me/+94787149579" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+            <a href="https://www.linkedin.com/in/pasindu-tb" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/pasindusampath" target="_blank"><i class='bx bxl-github'></i></a>
         </div>
 
         <div class="row">
@@ -635,6 +672,7 @@
 <script src="assert/script/jquery-3.6.4.min.js"></script>
 <script src="assert/script/image404.js"></script>
 <script src="assert/lib/aos-master/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 <script>
     AOS.init();
 </script>
@@ -669,15 +707,15 @@
 
         $('.hamburger>i').click(() => {
             let css = $('.navbar').eq(0).css('display');
-            if(css==='none'){
-                $('.hamburger').eq(1).css({"display":"block"});
-                $('.hamburger').eq(0).css({"display":"none"});
+            if (css === 'none') {
+                $('.hamburger').eq(1).css({"display": "block"});
+                $('.hamburger').eq(0).css({"display": "none"});
                 $('.navbar').eq(0).css({"display": "flex"});
                 $('.background').eq(0).css({"display": "block"});
 
-            }else{
-                $('.hamburger').eq(0).css({"display":"block"});
-                $('.hamburger').eq(1).css({"display":"none"});
+            } else {
+                $('.hamburger').eq(0).css({"display": "block"});
+                $('.hamburger').eq(1).css({"display": "none"});
                 $('.navbar').eq(0).css({"display": "none"});
                 $('.background').eq(0).css({"display": "none"});
             }
@@ -686,8 +724,8 @@
 
         $(".background").eq(0).click(function () {
             // Action to perform when the mouse moves out of the div
-            $('.hamburger').eq(0).css({"display":"block"});
-            $('.hamburger').eq(1).css({"display":"none"});
+            $('.hamburger').eq(0).css({"display": "block"});
+            $('.hamburger').eq(1).css({"display": "none"});
             $('.navbar').eq(0).css({"display": "none"});
             $('.background').eq(0).css({"display": "none"});
             // Add your code here

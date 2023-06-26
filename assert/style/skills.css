@@ -1,0 +1,160 @@
+#skills-section{
+    display: flex;
+    flex-direction: column;
+}
+.skills{
+    align-self: center;
+}
+#skills-section h1{ /*change font family of heading*/
+    font-family: sans-serif;
+}
+
+#skills-section li{ /*style the li tag*/
+    list-style-type: none;
+    font-family: sans-serif;
+}
+
+#skills-section .skills{ /*style the text*/
+    width: 500px;
+    margin: 60px auto;
+    color: #fff;
+}
+
+#skills-section .skills li{ /*set margin of li*/
+    margin: 20px 0;
+}
+
+#skills-section .bar{ /*style the bar*/
+    background-color: #353b48;
+    display: block;
+    height: 4px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #2187e7b3;
+}
+
+#skills-section .bar span{ /*style the span tag*/
+    height: 2px;
+    float: left;
+    background-color: #2187e7;
+}
+
+#skills-section .html{ /*set skills and animation of html*/
+    width: 80%;
+    animation: perceentage80 2s;
+}
+
+#skills-section .css{ /*set skills and animation of css*/
+    width: 35%;
+    animation: percentage30 2s;
+}
+
+#skills-section .javascript{ /*set skills and animation of javascript*/
+    width: 50%;
+    animation: percentage50 2s;
+}
+
+#skills-section .jquery{ /*set skills and animation of jquery*/
+    width: 30%;
+    animation: percentage30 2s;
+}
+
+#skills-section .java{
+    width: 93%;
+    animation: percentage93 2s;
+}
+
+#skills-section .mysql{
+    width: 93%;
+    animation: percentage93 2s;
+}
+
+#skills-section .javafx{
+    width: 93%;
+    animation: percentage93 2s;
+}
+
+#skills-section .hibernate{
+    width: 93%;
+    animation: percentage93 2s;
+}
+
+#skills-section .hibernate,.javafx,.java,.mysql {
+    position: relative;
+}
+
+.hibernate::before ,.java:before ,.mysql:before , .javafx:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255), rgba(255, 255, 255, 0));
+    animation: shine 2s infinite;
+    opacity: 100;
+    overflow: hidden;
+}
+.skills li{
+    position: relative;
+}
+.skills svg{
+    font-size: 40px;
+    position: absolute;
+    left: -58px;
+    top: -8px;
+}
+
+
+@keyframes shine {
+    0% { left: -100%; }
+    50% { left: 0%; }
+    100% { left: 35%; }
+}
+
+
+@keyframes percentage80{ /*animate html skills*/
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 80%;
+    }
+}
+
+@keyframes percentage93{ /*animate css skills*/
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 93%;
+    }
+}
+
+@keyframes percentage50{ /*animate javascript skills*/
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 50%;
+    }
+}
+
+@keyframes percentage30{ /*animate jquery skills*/
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 30%;
+    }
+}
+@media all and (max-width: 450px){
+    #skills-section .skills{
+        width: 232px;
+    }
+}
