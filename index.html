@@ -662,9 +662,21 @@
             $('.paragraphs').eq(0).css({"display": "none"});
         });
 
+        $('.blur-background').eq(0).click(() => {
+            $('.paragraphs').eq(0).css({"display": "none"});
+        });
+
         $('.hamburger>i').eq(0).click(() => {
-            $('.navbar').eq(0).css({"display": "flex"});
-            $('.background').eq(0).css({"display": "block"});
+            let css = $('.navbar').eq(0).css('display');
+            if(css==='none'){
+                $('.navbar').eq(0).css({"display": "flex"});
+                $('.background').eq(0).css({"display": "block"});
+
+            }else{
+                $('.navbar').eq(0).css({"display": "none"});
+                $('.background').eq(0).css({"display": "none"});
+            }
+
         });
 
         $(".background").eq(0).click(function () {
