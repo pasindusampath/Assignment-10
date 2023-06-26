@@ -1,4 +1,4 @@
-document.ready(function(){
+function image(){
     var c = document.getElementById('canv');
     var $ = c.getContext('2d');
     c.width = 600; c.height = 400;
@@ -44,4 +44,5 @@ document.ready(function(){
     c.addEventListener('touchend',function(){
         return ms = false;
     }, false);
-}());
+};
+image();
