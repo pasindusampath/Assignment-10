@@ -537,7 +537,7 @@ body {
 
     .home {
         margin-top: 50px;
-        height: 100%;
+        height: max-content;
         flex-direction: column-reverse;
     }
 
