@@ -507,10 +507,9 @@ body {
         position: relative;
     }
 
-    .hamburger {
+    div[class="hamburger"]:nth-child(1){
         display: block;
         font-size: 50px;
-
     }
 
     .hamburger > i {
@@ -644,6 +643,10 @@ body {
         width: 100vw;
         height: 150vh;
         z-index: -1;
+    }
+    .topic .content{
+        font-size: 13px;
+        width: max-content;
     }
 
     @keyframes anim {

@@ -30,21 +30,22 @@
 <header class="header">
     <a href="#home-section" class="logo">Hello World :)</a>
     <div class="hamburger"><i class='bx bx-menu'></i></div>
+    <div class="hamburger"><i class='bx bx-x'></i></div>
     <nav id="navbar" class="navbar">
         <a data-aos="zoom-in-left" href="#home-section" style="--i:1" class="active">Home</a>
-        <a data-aos="zoom-in-left" style="--i:2">About</a>
-        <a data-aos="zoom-in-left" style="--i:3">Projects</a>
-        <a data-aos="zoom-in-left" style="--i:4">Assignments</a>
-        <a data-aos="zoom-in-left" style="--i:5">Contact</a>
+        <a data-aos="zoom-in-left" href="#about-me-section" style="--i:2">About</a>
+        <a data-aos="zoom-in-left" href="#project-section" style="--i:3">Projects</a>
+        <a data-aos="zoom-in-left" href="#assignments" style="--i:4">Assignments</a>
+        <a data-aos="zoom-in-left" href="#contact-section" style="--i:5">Contact</a>
     </nav>
     <div class="background"></div>
 </header>
 <section id="home-section" class="home">
     <div data-aos="flip-right" class="social-media-container">
-        <a href="#"><i class="bx bxl-facebook"></i></a>
-        <a href="#"><i class='bx bxl-whatsapp'></i></a>
-        <a href="#"><i class='bx bxl-linkedin'></i></a>
-        <a href="#"><i class='bx bxl-github'></i></a>
+        <a href="#https://web.facebook.com/PASINDU.T.B"><i class="bx bxl-facebook"></i></a>
+        <a href="#https://wa.me/+94787149579"><i class='bx bxl-whatsapp'></i></a>
+        <a href="#https://www.linkedin.com/in/pasindu-tb"><i class='bx bxl-linkedin'></i></a>
+        <a href="#https://github.com/pasindusampath"><i class='bx bxl-github'></i></a>
     </div>
     <div class="home-content">
         <h1 data-aos="fade-up">
@@ -610,10 +611,10 @@
 <footer>
     <div class="footer">
         <div class="row">
-            <a href="#"><i class="bx bxl-facebook"></i></a>
-            <a href="#"><i class='bx bxl-whatsapp'></i></a>
-            <a href="#"><i class='bx bxl-linkedin'></i></a>
-            <a href="#"><i class='bx bxl-github'></i></a>
+            <a href="#https://web.facebook.com/PASINDU.T.B"><i class="bx bxl-facebook"></i></a>
+            <a href="#https://wa.me/+94787149579"><i class='bx bxl-whatsapp'></i></a>
+            <a href="#https://www.linkedin.com/in/pasindu-tb"><i class='bx bxl-linkedin'></i></a>
+            <a href="#https://github.com/pasindusampath"><i class='bx bxl-github'></i></a>
         </div>
 
         <div class="row">
@@ -666,13 +667,17 @@
             $('.paragraphs').eq(0).css({"display": "none"});
         });
 
-        $('.hamburger>i').eq(0).click(() => {
+        $('.hamburger>i').click(() => {
             let css = $('.navbar').eq(0).css('display');
             if(css==='none'){
+                $('.hamburger').eq(1).css({"display":"block"});
+                $('.hamburger').eq(0).css({"display":"none"});
                 $('.navbar').eq(0).css({"display": "flex"});
                 $('.background').eq(0).css({"display": "block"});
 
             }else{
+                $('.hamburger').eq(0).css({"display":"block"});
+                $('.hamburger').eq(1).css({"display":"none"});
                 $('.navbar').eq(0).css({"display": "none"});
                 $('.background').eq(0).css({"display": "none"});
             }
@@ -681,6 +686,8 @@
 
         $(".background").eq(0).click(function () {
             // Action to perform when the mouse moves out of the div
+            $('.hamburger').eq(0).css({"display":"block"});
+            $('.hamburger').eq(1).css({"display":"none"});
             $('.navbar').eq(0).css({"display": "none"});
             $('.background').eq(0).css({"display": "none"});
             // Add your code here
@@ -694,7 +701,6 @@
             }
         });*/
     });
-
     /*window.onscroll = function () {
         var targetSection = document.getElementById('assignments');
         var rect = targetSection.getBoundingClientRect();
@@ -709,8 +715,6 @@
             $('.selected').hide(1500);
         }
     };*/
-
-
 </script>
 <script>
     // Add the "start-animation" class to the div to trigger the animation

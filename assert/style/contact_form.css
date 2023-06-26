@@ -406,10 +406,12 @@
 }
 #contact-section .input-text {
     padding: 0 0 11px 0;
+    color: #64b4bd;
 }
 #contact-section .input-textarea {
     padding: 0;
     height: 99px;
+    color: #64b4bd;
 }
 #contact-section .input-select select {
     padding: 0 24px 11px 0;
