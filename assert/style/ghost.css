@@ -1,0 +1,212 @@
+#app-cover {
+    position: sticky;
+    top: 30%;
+    transform: scale(2);
+    align-self: baseline;
+}
+#app-cover .square {
+    position: relative;
+    height: 140px;
+    width: 140px;
+    box-shadow: inset 0 0 0 10px #464852;
+    display: none;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+#app-cover .square span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+}
+#app-cover .square span:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: none;
+    border-top: 10px solid #fff;
+    /*animation: animate2 2s linear infinite;*/
+}
+@keyframes animate2 {
+    0% {
+        left: -100%;
+    }
+    25% {
+        left: 0;
+    }
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+#app-cover .square span:nth-child(1) {
+    transform: rotate(0deg);
+}
+#app-cover .square span:nth-child(2) {
+    transform: rotate(90deg);
+}
+#app-cover .square span:nth-child(3) {
+    transform: rotate(180deg);
+}
+#app-cover .square span:nth-child(4) {
+    transform: rotate(270deg);
+}
+
+#app-cover .square span:nth-child(1):before {
+    animation-delay: 0s;
+}
+#app-cover .square span:nth-child(2):before {
+    animation-delay: 0.5s;
+}
+#app-cover .square span:nth-child(3):before {
+    animation-delay: 1s;
+}
+#app-cover .square span:nth-child(4):before {
+    animation-delay: 1.5s;
+}
+#app-cover #ghost {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 66px;
+    height: 66px;
+    margin: -37.5px auto 0 auto;
+    background-color: #fff;
+    border-radius: 50% 50% 0 0;
+    animation: updown 4s ease 0s infinite forwards;
+    box-shadow: inset -3px 0 0 0px #e4e4e4, 0 0px 0px 6px #e91e63;
+}
+@keyframes updown {
+    0% {
+        margin-top: -37.5px;
+    }
+    25% {
+        margin-top: -50px;
+    }
+    50% {
+        margin-top: -37.5px;
+    }
+    75% {
+        margin-top: -50px;
+    }
+    100% {
+        margin-top: -37.5px;
+    }
+}
+#app-cover #eyes {
+    top: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+#app-cover .eye {
+    background-color: #000;
+    border-radius: 50%;
+}
+#app-cover #eyes,
+#app-cover .eye {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+}
+#app-cover .eye:first-child {
+    left: -14px;
+}
+#app-cover .eye:last-child {
+    left: 14px;
+}
+#app-cover .eye:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+#app-cover #mouth {
+    position: absolute;
+    top: 42px;
+    left: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #000;
+    border-top-width: 0;
+    border-radius: 0 0 100% 100%;
+    margin: 0 auto;
+}
+#app-cover #mouth:before,
+#app-cover #mouth:after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    width: 10px;
+    height: 6px;
+    background-color: #ff6d9f;
+    border-radius: 10px;
+}
+#app-cover #mouth:before {
+    left: -15px;
+}
+#app-cover #mouth:after {
+    right: -15px;
+}
+#app-cover #legs {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -20px;
+    width: 22px;
+    height: 22px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0 0 50% 50%;
+}
+
+#app-cover #legs:before,
+#app-cover #legs:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 0 0 50% 50%;
+}
+
+#app-cover #legs:before {
+    left: -22px;
+}
+
+#app-cover #legs:after {
+    left: 22px;
+    box-shadow: inset -3px 0 0 0px #e4e4e4;
+}
+@media all and (max-width: 450px){
+    #app-cover{
+        position: sticky;
+        top: 69%;
+        /* left: -16%; */
+        z-index: -1;
+        align-self: self-start;
+        left: 76%;
+    }
+    #app-cover .square{
+        display: none;
+    }
+}

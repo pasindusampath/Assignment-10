@@ -7,7 +7,9 @@
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
-
+section{
+    height: 100vh;
+}
 .blur-background {
     display: none;
 }
@@ -437,6 +439,10 @@ body {
 }
 
 @media all and (max-width: 450px) {
+    section{
+        height: max-content;
+        position: relative;
+    }
     .hamburger {
         display: block;
         font-size: 50px;
@@ -515,7 +521,7 @@ body {
     }
 
     .about-me {
-        height: 100%;
+        height: max-content;
     }
 
     .content h2 {
