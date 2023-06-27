@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Queue</title>
+    <link href="style/style.css">
+    <style>
+
+        .container {
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            position: absolute;
+
+            width: 80%;
+            height: 50%;
+
+            /*border: 2px solid black;*/
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .gif_container {
+            width: 20%;
+            height: 40%;
+
+            font-size: 25px; /* Set the desired font size */
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gif_container:last-child {
+            width: 30%;
+            height: 80%;
+
+        }
+
+        img {
+            /*border: 2px solid red;*/
+            height: 100%;
+            width: 100%;
+        }
+
+        .gif {
+            padding: 10px;
+            height: 100%;
+            width: 90%;
+            /*border: 2px solid black;*/
+            background-image: url("assets/soft-meme.gif");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+<body>
+<section class="container">
+    <div class="gif_container">
+        <div class="gif">A</div>
+    </div>
+    <div class="gif_container">
+        <div class="gif">B</div>
+    </div>
+    <div class="gif_container">
+        <div class="gif">C</div>
+    </div>
+    <div class="gif_container">
+        <div class="gif">D</div>
+    </div>
+    <div class="gif_container">
+        <div class="gif">E</div>
+    </div>
+    <div class="gif_container">
+        <div class="gif">F</div>
+    </div>
+    <div class="gif_container">
+        <img src="assets/home.png" alt="home">
+    </div>
+</section>
+
+<script>
+    function changeText() {
+        let elements = document.getElementsByClassName("gif");
+        if (elements.length > 1) {
+            let lastElementIndex = elements.length - 1;
+            let lastElementHTML = elements[lastElementIndex].innerHTML;
+            for (let i = lastElementIndex; i > 0; i--) {
+                elements[i].innerHTML = elements[i - 1].innerHTML;
+            }
+            elements[0].innerHTML = lastElementHTML;
+        }
+    }
+
+    setInterval(changeText, 650);
+</script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 08</title>
+
+  <style>
+
+    body{
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    #main_sec{
+      width: 80%;
+      margin-top: 30px;
+      position: relative;
+    }
+
+    p{
+      text-align: center;
+      margin: 0;
+      margin-bottom: 200px;
+    }
+
+    #div_sec{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    p{
+      color: white;
+      font-size: 28px;
+    }
+
+    hr{
+      margin: 10px;
+      width: 60%;
+    }
+
+    button{
+      width: 75px;
+      height: 30px;
+      margin: 10px;
+      font-size: 14px;
+      border: 1px solid white;
+      border-radius: 5px;
+    }
+
+    #sec2{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    div {
+      width: 85px;
+      height: 45px;
+      margin-left: 5px;
+    }
+
+    #first_div{
+    /background-color: darkorchid;/
+    background-color: rgb(0, 0, 255);
+    }
+
+    #second_div{
+      background-color: rgb(0, 128, 0);
+    }
+
+    #third_div{
+      background-color: rgb(255, 0, 0);
+    }
+
+    #fourth_div{
+      background-color:rgb(255, 255, 0);
+    }
+    #fifth_div{
+      background-color: rgb(128, 0, 128);
+    }
+    #last_div{
+      background-color: rgb(255, 165, 0);
+    }
+
+    #first_div{
+      left: 0;
+    }
+
+    #last_div{
+      position: absolute;
+      right: 0;
+    }
+
+    button{
+      border-radius: 15px;
+    }
+
+  </style>
+
+</head>
+<body>
+<section id="main_sec">
+
+  <p>JavaScript Queue</p>
+  <div id="first_div"></div>
+
+  <section id="sec2">
+    <hr>
+    <section id="div_sec">
+      <div id="second_div"></div>
+      <div id="third_div"></div>
+      <div id="fourth_div"></div>
+      <div id="fifth_div"></div>
+      <!--      <div></div>-->
+      <!--      <div></div>-->
+      <!--      <div></div>-->
+    </section>
+    <hr>
+  </section>
+  <div id="last_div"></div>
+</section>
+
+<div>
+  <button id="startButton">Start</button>
+  <button id="stopButton">Stop</button>
+</div>
+
+
+<script>
+  function setDiv1() {
+    var element = document.getElementById("first_div");
+    setColor(element);
+  }
+  function setDiv2() {
+    var element = document.getElementById("second_div");
+    setColor(element);
+  }
+  function setDiv3() {
+    var element = document.getElementById("third_div");
+    setColor(element);
+  }
+  function setDiv4() {
+    var element = document.getElementById("fourth_div");
+    setColor(element);
+  }
+  function setDiv5() {
+    var element = document.getElementById("fifth_div");
+    setColor(element);
+  }
+  function setDiv6() {
+    var element = document.getElementById("last_div");
+    setColor(element);
+  }
+
+  function setColor(element){
+    var computedStyle = window.getComputedStyle(element);
+    var backgroundColor = computedStyle.backgroundColor;
+
+    if (backgroundColor === 'rgb(0, 0, 255)') {
+      element.style.backgroundColor = 'rgb(255, 165, 0)';
+    } else if (backgroundColor === 'rgb(0, 128, 0)') {
+      element.style.backgroundColor = 'rgb(0, 0, 255)';
+    }else if (backgroundColor === 'rgb(255, 0, 0)') {
+      element.style.backgroundColor = 'rgb(0, 128, 0)';
+    }else if (backgroundColor === 'rgb(255, 255, 0)') {
+      element.style.backgroundColor = 'rgb(255, 0, 0)';
+    }else if (backgroundColor === 'rgb(128, 0, 128)') {
+      element.style.backgroundColor = 'rgb(255, 255, 0)';
+    }else if (backgroundColor === 'rgb(255, 165, 0)') {
+      element.style.backgroundColor = 'rgb(128, 0, 128)';
+    }
+  }
+
+  var intervalId1;
+  var intervalId2;
+  var intervalId3;
+  var intervalId4;
+  var intervalId5;
+  var intervalId6;
+
+  function startToggling() {
+    intervalId1 = setInterval(setDiv1, 1500);
+    intervalId2 = setInterval(setDiv2, 1500);
+    intervalId3 = setInterval(setDiv3, 1500);
+    intervalId4 = setInterval(setDiv4, 1500);
+    intervalId5 = setInterval(setDiv5, 1500);
+    intervalId6 = setInterval(setDiv6, 1500);
+  }
+
+  function stopToggling() {
+    clearInterval(intervalId1);
+    clearInterval(intervalId2);
+    clearInterval(intervalId3);
+    clearInterval(intervalId4);
+    clearInterval(intervalId5);
+    clearInterval(intervalId6);
+  }
+
+  var startButton = document.getElementById("startButton");
+  var stopButton = document.getElementById("stopButton");
+
+  startButton.addEventListener("click", startToggling);
+  stopButton.addEventListener("click", stopToggling);
+
+
+</script>
+
+</body>
+</html>

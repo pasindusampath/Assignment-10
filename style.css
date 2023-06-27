@@ -9,6 +9,15 @@
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
+.show{
+    display: none ;
+}
+.view{
+    display: flex;
+}
+.hamburger{
+    display: none;
+}
 a{
     cursor: crosshair;
 }
@@ -503,14 +512,19 @@ body {
     }
 }
 
+@media all and (max-width: 712px) and (min-width: 450px){
+
+}
+
 @media all and (max-width: 450px) {
+
     section{
         height: max-content;
         position: relative;
     }
 
     .hamburger{
-        display: block;
+        display: none;
         font-size: 50px;
     }
 
@@ -540,6 +554,14 @@ body {
         height: 301px;
         width: 150px;
         padding: 20px;
+    }
+
+    .view{
+        display: flex;
+    }
+
+    .show{
+        display: block !important;
     }
 
     .home {

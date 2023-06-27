@@ -568,6 +568,27 @@
                         </div>
                     </div>
                 </div>
+                <div data-aos="zoom-in-up" class="col" ontouchstart="this.classList.toggle('hover');">
+                    <div class="container">
+                        <div class="front">
+                            <!--style="background: linear-gradient(45deg ,#fac98a, #fd5efa , #f6ff8d)">-->
+                            <div class="inner">
+                                <p>QUEUE</p>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <a href="assert/assignments/assignment-9/first/index.html">
+                                    <button>CASE 1</button>
+                                </a>
+                                <a href="assert/assignments/assignment-9/second/index.html">
+                                    <button>CASE 2</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -664,12 +685,10 @@
 <script>
     $(document).ready(function () {
         var buttons = $('.card-back-button');
-        $('.hamburger').eq(1).css({"display":"none"});
+        $('.hamburger').eq(0).addClass('show');
         buttons.each(function (index) {
 
             console.log(index);
-            //console.log("Button " + (index + 1) + ": ", $(this));
-            // Perform any desired operations on each button
             $(this).click(
                 function () {
                     //if($(this).hasClass("selected")){return;}
@@ -692,56 +711,31 @@
 
         $('.hamburger>i').click(() => {
             let css = $('.navbar').eq(0).css('display');
-            if (css === 'none') {
-                $('.hamburger').eq(1).css({"display": "block"});
-                $('.hamburger').eq(0).css({"display": "none"});
-                $('.navbar').eq(0).css({"display": "flex"});
-                $('.background').eq(0).css({"display": "block"});
-
-            } else {
-                $('.hamburger').eq(0).css({"display": "block"});
-                $('.hamburger').eq(1).css({"display": "none"});
-                $('.navbar').eq(0).css({"display": "none"});
+            console.log($('.navbar').hasClass('view'));
+            if (($('.navbar').hasClass('view'))) {
+                $('.hamburger').eq(1).removeClass('show');
+                $('.hamburger').eq(0).addClass('show');
+                $('.navbar').eq(0).removeClass('view');
                 $('.background').eq(0).css({"display": "none"});
+            } else {
+                $('.hamburger').eq(1).addClass('show');
+                $('.hamburger').eq(0).removeClass('show');
+                $('.navbar').eq(0).addClass('view');
+                $('.background').eq(0).css({"display": "block"});
             }
 
         });
 
         $(".background").eq(0).click(function () {
-            // Action to perform when the mouse moves out of the div
-            $('.hamburger').eq(0).css({"display": "block"});
-            $('.hamburger').eq(1).css({"display": "none"});
-            $('.navbar').eq(0).css({"display": "none"});
+            $('.hamburger').eq(1).removeClass('show');
+            $('.hamburger').eq(0).addClass('show');
+            $('.navbar').eq(0).removeClass('view');
             $('.background').eq(0).css({"display": "none"});
-            // Add your code here
         });
 
-        /*$(document).on('click touchstart', function(event) {
-            var target = $(event.target);
-            if (!target.closest('#navbar').length && !target.is('#navbar')) {
-                // Hide the div when the target element is outside of #myDiv
-                $('.navbar').eq(0).css({"display":"none"});
-            }
-        });*/
     });
-    /*window.onscroll = function () {
-        var targetSection = document.getElementById('assignments');
-        var rect = targetSection.getBoundingClientRect();
-
-        // Check if the top of the section is visible in the viewport
-        if (rect.top >= 0 && rect.top+250 <= window.innerHeight) {
-            handleScroll(); // Call your function when the section is scrolled to
-        }
-
-        function handleScroll() {
-            // Your code to be executed when the section is scrolled to
-            $('.selected').hide(1500);
-        }
-    };*/
 </script>
 <script>
-    // Add the "start-animation" class to the div to trigger the animation
-    //document.querySelector('.animated-border').classList.add('start-animation');
     $.fn.typewriter = function () {
         this.each(function () {
             var $ele = $(this), str = $ele.html(), progress = 0, offset = 0;
@@ -795,16 +789,6 @@
         "outerHeight": 41
     };
     magicMouse(options);
-    /*function update(e){
-        var x = e.clientX || e.touches[0].clientX
-        var y = e.clientY || e.touches[0].clientY
-
-        document.documentElement.style.setProperty('--cursorX', x + 'px')
-        document.documentElement.style.setProperty('--cursorY', y + 'px')
-    }
-
-    document.addEventListener('mousemove',update)
-    document.addEventListener('touchmove',update)*/
 </script>
 <script>
     function sendEmail(event) {
@@ -824,5 +808,16 @@
 
         window.location.href = mailtoLink;
     }
+</script>
+<script>
+    let items = $('#navbar a');
+    $.each(items,function (i,e){
+        console.log(e)
+        $(e).click(function(){
+            console.log(i)
+            $('#navbar a').removeClass('active');
+            $('#navbar a').eq(i).addClass('active');
+        });
+    })
 </script>
 </html>
