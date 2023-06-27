@@ -409,7 +409,9 @@ body {
     font-size:2em;
     margin:0% 1%;
 }
-
+#skills-section{
+    margin-top: 100px;
+}
 @media (max-width:450px){
     .footer{
         text-align:left;
@@ -507,9 +509,14 @@ body {
         position: relative;
     }
 
-    div[class="hamburger"]:nth-child(1){
+    .hamburger{
         display: block;
         font-size: 50px;
+    }
+
+    .header>div:nth-child(1){
+        display: none;
+
     }
 
     .hamburger > i {
