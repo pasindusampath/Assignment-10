@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS03</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+
+        section {
+            height: 100vh;
+        }
+
+        section:nth-child(1) {
+            background: linear-gradient(80deg,rosybrown,cornflowerblue );
+        }
+
+        section:nth-child(2) {
+            background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+        }
+
+        section:nth-child(3) {
+            background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+        }
+
+        section:nth-child(4) {
+            background-image: linear-gradient(to right, #870000, #190a05);
+        }
+
+        body > section > div {
+            position: sticky;
+            height: 60px;
+            top: 0;
+            z-index: 3;
+        }
+
+        .div1 {
+            background-image: radial-gradient( circle 759px at -6.7% 50%, rgba(80,131,73,1) 0%, rgba(140,209,131,1) 26.2%, rgba(178,231,170,1) 50.6%, rgba(144,213,135,1) 74.1%, rgba(75,118,69,1) 100.3% );
+
+        }
+
+        .div2 {
+            background-image: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+
+        }
+
+        .div3 {
+            background-image: linear-gradient(to right, #ff512f, #f09819);
+        }
+
+        .div4 {
+            background-image: linear-gradient(to right, #33001b, #ff0084);
+
+        }
+
+        div > h1 {
+            margin: auto;
+            padding: 10px;
+            color: white;
+        }
+
+        section > h1 {
+            position: relative;
+            margin-top: 50vh;
+            text-align: center;
+            font-size: 150px;
+            transform: translate(0%, -50%);
+        }
+
+    </style>
+</head>
+<body>
+
+<section>
+    <div class="div1">
+        <h1>Card 1</h1>
+    </div>
+    <h1>Hell😮</h1>
+</section>
+
+<section>
+    <div class="div2">
+        <h1>Card 2</h1>
+    </div>
+    <h1>H🧐w</h1>
+</section>
+
+<section>
+    <div class="div3">
+        <h1>Card 3</h1>
+    </div>
+    <h1 class="are">Are</h1>
+</section>
+
+<section>
+    <div class="div4">
+        <h1>Card 4</h1>
+    </div>
+    <h1>You..🤔🤔</h1>
+</section>
+
+</body>
+</html>
